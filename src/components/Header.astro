@@ -3,20 +3,24 @@
 ---
 
 <header class="header">
-  <nav class="navigation">
-    <div class="nav-left">
-      <a href="/" class="nav-link">Home</a>
-    </div>
-    <div class="nav-right">
-      <ul class="nav-list">
-        <li><a href="/corsi" class="nav-link">Corsi</a></li>
-        <li><a href="/eventi" class="nav-link">Eventi</a></li>
-        <li><a href="/storia" class="nav-link">Storia</a></li>
-        <li><a href="/banda" class="nav-link">Banda</a></li>
-        <li><a href="/news" class="nav-link">News</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="container">
+    <nav class="navigation">
+      <div class="nav-left">
+        <a href="/" class="logo-link">
+          <img src="../public/images/remove-background-project.png" alt="Logo" class="logo" />
+        </a>
+      </div>
+      <div class="nav-right">
+        <ul class="nav-list">
+          <li><a href="/corsi" class="nav-link">Corsi</a></li>
+          <li><a href="/eventi" class="nav-link">Eventi</a></li>
+          <li><a href="/storia" class="nav-link">Storia</a></li>
+          <li><a href="/banda" class="nav-link">Banda</a></li>
+          <li><a href="/news" class="nav-link">News</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </header>
 
 <style>
@@ -25,6 +29,9 @@
     padding: 1rem 2rem;
     border-bottom: 2px solid #1e2a42;
     width: 100%;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
   }
 
   .navigation {
@@ -38,6 +45,11 @@
 
   .nav-left {
     flex-shrink: 0;
+  }
+
+  .logo {
+    height: 50px;
+    width: auto;
   }
 
   .nav-right {
