@@ -1,8 +1,94 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
 ---
 
 <Layout title="Benvenuti nel sito della Banda">
-  <h1>Benvenuti nel sito della Banda</h1>
-  <p>Qui troverete informazioni sui nostri corsi, eventi e la nostra storia.</p>
+
+  <!-- HERO SECTION -->
+  <section class="section-hero">
+    <div class="home-container">
+      <h1>Filarmonica Senofonte Prato</h1>
+    </div>
+  </section>
+
+  <!-- CHI SIAMO SECTION -->
+  <section class="section-about">
+    <div class="home-container">
+      <h2>Chi Siamo</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, ligula porttitor
+        semper eleifend, elit nisi ultricies nulla, quis laoreet ligula ante suscipit sem. 
+      </p>
+      <p>Sed ultrices imperdiet aliquet. Mauris suscipit ultrices justo eu pulvinar. 
+        Vestibulum vitae rutrum felis. Nulla id sem ac ipsum volutpat ultrices.
+      </p>
+      <div class="container-bottoni">
+        <a href="/corsi" class="button">Scopri i corsi</a>
+        <a href="/eventi" class="button">Vedi eventi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTI SECTION -->
+  <section class="section-eventi">
+    <div class="home-container">
+      <h2>Prossimi Eventi</h2>
+      <ul>
+        <li><a href="/eventi/evento-1">Evento 1</a></li>
+        <li><a href="/eventi/evento-2">Evento 2</a></li>
+        <li><a href="/eventi/evento-3">Evento 3</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- BANDA SECTION -->
+  <section class="section-banda">
+    <div class="home-container">
+      <h2>La nostra Banda</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, ligula porttitor
+        semper eleifend, elit nisi ultricies nulla, quis laoreet ligula ante suscipit sem. 
+      </p>
+    </div>
+  </section>
+
+  <!-- CORSI SECTION 1 -->
+  <section class="section1-corsi">
+    <div class="home-container">
+      <h2>Corsi di Musica</h2>
+      <ul>
+        <li><a href="/corsi">Settore Classico</a></li>
+        <li><a href="/corsi">Settore Moderno</a></li>
+        <li><a href="/corsi">Canto</a></li>
+        <li><a href="/corsi">Propedeutica</a></li>
+      </ul>
+    </div>
+  </section>
+
+    <!-- CORSI SECTION 2 -->
+  <section class="section2-corsi">
+    <div class="home-container">
+      <h2>I nostri Corsi</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, ligula porttitor
+        semper eleifend, elit nisi ultricies nulla, quis laoreet ligula ante suscipit sem. 
+      </p>
+      <div class="container-bottoni">
+        <a href="/corsi" class="button">Scopri i Corsi</a>
+      </div>
+    </div>
+  </section>
+
+   <!-- NEWS SECTION -->
+  <section class="section-news">
+    <div class="home-container">
+      <h2>News</h2>
+      <ul>
+        <li><a href="/news/news-1">News 1</a></li>
+        <li><a href="/news/news-2">News 2</a></li>
+        <li><a href="/news/news-3">News 3</a></li>
+      </ul>
+      <div class="container-bottoni">
+        <a href="/news" class="button">Vedi le News</a>
+      </div>
+    </div>
+  </section>
 </Layout>

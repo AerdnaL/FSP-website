@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    flex: 1;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 50px; 
+  }
+  
+  .grid {
+    gap: 20px; 
+  }
+}
+
+/* Hero Section */
+.section-hero {
+    position: relative;
+    height: 100vh; /* Altezza piena dello schermo */
+    min-height: 600px; /* Altezza minima per schermi molto bassi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../public/images/hero-image-placeholder1.jpg');
+    background-size: cover;
+}
+
+.section-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay scuro */
+}
+
+.section-hero h1 {
+    color: white;
+    position: relative;
+    font-size: 4rem;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px; 
+  }
+  
+  .grid {
+    gap: 15px; 
+    grid-template-columns: 1fr; 
+  }
+  
+  [class*="col-"] {
+    grid-column: span 1;
+  }
+}
+
+/* Home page */
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+    width: 100%;
+}
+
+section {
+    width: 100%;
+    padding: 4rem 0;
+}
+
+.section-about {
+  background-color: #ffffff;
+}
+
+.section-eventi {
+  background-color: #f8f9fa;
+}
+
+.section-banda {
+  background-color: #ffffff;
+}
+
+.section1-corsi {
+  background-color: #f8f9fa;
+}
+
+.section2-corsi {
+  background-color: #ffffff;
+}
+
+.section-news {
+  background-color: #f8f9fa;
+}
