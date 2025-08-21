@@ -5,26 +5,97 @@ import CourseCard from '../components/Course-card.astro';
 
 <Layout title='pagina-corsi'>
     <div class="home-container">
+        <!-- Heading Section -->
         <div class="grid">
             <div class="col-12">
                 <h1 class="corsi-heading">I nostri Corsi</h1>
             </div>
-            <div class="col-3">
+        </div>
+
+        <!-- Classical Section -->
+        <div class="grid section-courses">
+            <div class="col-12">
                 <h2>Settore Classico</h2>
+            </div>
+            <div class="col-3">
                 <CourseCard
-                    title="Nome del Corso"
-                    imageUrl="./public/images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg"
+                    title="Pianoforte"
+                    imageUrl="./public/images/piano.jpg"
                 />
             </div>
             <div class="col-3">
+                <CourseCard
+                    title="Violino"
+                    imageUrl="./public/images/violin.jpg"
+                />
+            </div>
+                        <div class="col-3">
+                <CourseCard
+                    title="Pianoforte"
+                    imageUrl="./public/images/piano.jpg"
+                />
+            </div>
+            <div class="col-3">
+                <CourseCard
+                    title="Violino"
+                    imageUrl="./public/images/violin.jpg"
+                />
+            </div>
+                        <div class="col-3">
+                <CourseCard
+                    title="Pianoforte"
+                    imageUrl="./public/images/piano.jpg"
+                />
+            </div>
+            <div class="col-3">
+                <CourseCard
+                    title="Violino"
+                    imageUrl="./public/images/violin.jpg"
+                />
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+
+        <!-- Modern Section -->
+        <div class="grid section-courses">
+            <div class="col-12">
                 <h2>Settore Moderno</h2>
             </div>
             <div class="col-3">
+                <CourseCard
+                    title="Chitarra Elettrica"
+                    imageUrl="./public/images/electric-guitar.jpg"
+                />
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+
+        <!-- Singing Section -->
+        <div class="grid section-courses">
+            <div class="col-12">
                 <h2>Canto</h2>
             </div>
             <div class="col-3">
+                <CourseCard
+                    title="Canto Moderno"
+                    imageUrl="./public/images/singing.jpg"
+                />
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+
+        <!-- Propedeutica Section -->
+        <div class="grid section-courses">
+            <div class="col-12">
                 <h2>Propedeutica</h2>
             </div>
+            <div class="col-3">
+                <CourseCard
+                    title="Propedeutica Musicale"
+                    imageUrl="./public/images/propedeutica.jpg"
+                />
+            </div>
+            <!-- Add more cards as needed -->
         </div>
     </div>
 </Layout>

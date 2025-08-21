@@ -193,5 +193,27 @@ section {
 /* ------------------------ */
 
 .corsi-heading {
-  margin-top: 150px;
+    text-align: center;
+    margin: 8rem 0;
 }
+
+  .section-courses {
+      margin-bottom: 4rem;
+  }
+
+  .section-courses h2 {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+      .col-3 {
+          grid-column: span 6; /* 2 cards per row on tablets */
+      }
+  }
+
+  @media (max-width: 480px) {
+      .col-3 {
+          grid-column: span 12; /* 1 card per row on mobile */
+      }
+  }
