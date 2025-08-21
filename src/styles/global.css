@@ -187,3 +187,11 @@ section {
     width: auto;
     border-radius: 8px;
 }
+
+/* ------------------------ */
+/* ----- Pagina Corsi ----- */
+/* ------------------------ */
+
+.corsi-heading {
+  margin-top: 150px;
+}
