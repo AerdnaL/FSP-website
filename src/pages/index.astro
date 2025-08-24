@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
+import HorizontalCard from '../components/Horizontal-card.astro';
 ---
 
 <Layout title="Benvenuti nel sito della Banda">
@@ -43,6 +44,16 @@ import '../styles/global.css';
   <section class="section-eventi">
     <div class="home-container">
       <h2>Prossimi Eventi</h2>
+      <div class="grid">
+        <div class="col-12">
+          <HorizontalCard
+            title="Card Title"
+            subtitle="Card Subtitle"
+            description="Your description here"
+            imageUrl="public/images/events/In-Canto d'Estate(4).png"
+          />
+        </div>
+      </div>
       <ul>
         <li><a href="/eventi/evento-1">Evento 1</a></li>
         <li><a href="/eventi/evento-2">Evento 2</a></li>
