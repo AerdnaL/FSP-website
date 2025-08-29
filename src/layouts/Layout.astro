@@ -25,16 +25,10 @@ const { title, description = "Sito web della banda" } = Astro.props;
   </head>
 
   <body>
-    <div class="page-container">
+    <main class="main-container">
       <Header />
-      
-      <main class="main-content">
-        <div class="container">
-          <slot />
-        </div>
-      </main>
-      
+        <slot />
       <Footer />
-    </div>
+    </main>
   </body>
 </html>

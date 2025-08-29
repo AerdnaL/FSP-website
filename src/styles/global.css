@@ -1,34 +1,64 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html {
-    font-size: 16px;
-    font-family: Poppins, sans-serif;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #333;
-}
-
-.page-container {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+html, body {
+  height: 100%;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
 }
 
 .main-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 0;
-    flex: 1;
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  flex: 1;
 }
 
+.content-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 100px;
+  align-items: center;
+}
+
+  .section-hero {
+    position: relative;
+    height: 100vh; 
+    min-height: 600px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+
+  .section-hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+  .section-hero h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-size: 4rem;
+  }
+
+/*
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -57,9 +87,9 @@ body {
   .grid {
     gap: 20px; 
   }
-}
+} */
 
-/* Media Queries */
+/* Media Queries 
 @media (max-width: 768px) {
   .container {
     padding: 0 20px; 
@@ -73,9 +103,9 @@ body {
   [class*="col-"] {
     grid-column: span 1;
   }
-}
+} */
 
-/* Home page */
+/* Home page 
 .home-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -108,19 +138,19 @@ section {
 
 .button:hover {
     background-color: #555;
-}
+} */
 
-/* Hero Section */
+/* Hero Section 
 .section-hero {
     position: relative;
-    height: 100vh; /* Altezza piena dello schermo */
-    min-height: 600px; /* Altezza minima per schermi molto bassi */
+    height: 100vh; 
+    min-height: 600px; 
     display: flex;
     align-items: center;
     justify-content: center;
     background-image: url('../public/images/hero-image-placeholder1.jpg');
     background-size: cover;
-}
+} 
 
 .section-hero::before {
     content: "";
@@ -129,7 +159,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay scuro */
+    background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .section-hero h1 {
@@ -137,9 +167,9 @@ section {
     position: relative;
     font-size: 4rem;
     text-align: center;
-}
+} */
 
-/* About Section*/
+/* About Section
 .section-about {
   background-color: #ffffff;
   padding: 6rem 0;
@@ -149,7 +179,7 @@ section {
     display: flex;
     flex-direction: column;
     position: relative;
-    min-height: 400px; /* Match the height of the image */
+    min-height: 400px; 
 }
 
 .section-about p:first-of-type {
@@ -157,14 +187,16 @@ section {
 }
 
 .container-bottoni {
-    margin-top: auto; /* This will push the buttons to the bottom */
+    margin-top: auto; 
     padding-top: 2rem;
-}
+} */
 
-/* Eventi Section */
+/* Eventi Section 
 .section-eventi {
   background-color: #f8f9fa;
-}
+} */
+
+/*
 
 .section-banda {
   background-color: #ffffff;
@@ -180,17 +212,17 @@ section {
 
 .section-news {
   background-color: #f8f9fa;
-}
+} 
 
 .home-image {
     height: 400px;
     width: auto;
     border-radius: 8px;
-}
+} */
 
 /* ------------------------ */
 /* ----- Pagina Corsi ----- */
-/* ------------------------ */
+/* ------------------------ 
 
 .corsi-heading {
     text-align: center;
@@ -208,12 +240,12 @@ section {
 
   @media (max-width: 768px) {
       .col-3 {
-          grid-column: span 6; /* 2 cards per row on tablets */
+          grid-column: span 6; 
       }
   }
 
   @media (max-width: 480px) {
       .col-3 {
-          grid-column: span 12; /* 1 card per row on mobile */
+          grid-column: span 12; 
       }
-  }
+  } */

@@ -7,13 +7,49 @@ import HorizontalCard from '../components/Horizontal-card.astro';
 <Layout title="Benvenuti nel sito della Banda">
 
   <!-- HERO SECTION -->
-  <section class="section-hero">
-    <div class="home-container">
+  <section class="section-hero" style="background-image: url('../public/images/hero-image-placeholder1.jpg');">
+    <div class="content-container">
       <h1>Filarmonica Senofonte Prato</h1>
     </div>
   </section>
 
-  <!-- CHI SIAMO SECTION -->
+  <section class="section-about">
+    <div class="content-container">
+
+    </div>
+  </section>
+
+  <section class="section-eventi">
+    <div class="content-container"></div>
+  </section>
+
+  <section class="section-banda">
+    <div class="content-container"></div>
+  </section>
+
+  <section class="section-corsi">
+    <div class="content-container"></div>
+  </section>
+
+  <section class="section-news">
+    <!--     <div class="content-container">
+      <div class="container-immagine-about">
+        <img src="public/images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg" alt="about image" class="home-image" />
+      </div>
+      <div class="container-testo-about">
+        <h2>Chi Siamo</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Integer ac euismod ipsum, at hendrerit massa. Maecenas feugiat ac neque 
+          vel pellentesque. Curabitur ac ullamcorper massa. Vivamus eu mollis metus. 
+          Pellentesque habitant morbi tristique senectus et 
+          netus et malesuada fames ac turpis egestas. 
+        </p>
+        <div class="container-bottoni-about"></div>
+      </div>
+    </div> -->
+  </section>
+
+  <!-- 
   <section class="section-about">
     <div class="home-container">
       <div class="grid">
@@ -40,7 +76,7 @@ import HorizontalCard from '../components/Horizontal-card.astro';
     </div>
   </section>
 
-  <!-- EVENTI SECTION -->
+
   <section class="section-eventi">
     <div class="home-container">
       <h2>Prossimi Eventi</h2>
@@ -62,7 +98,7 @@ import HorizontalCard from '../components/Horizontal-card.astro';
     </div>
   </section>
 
-  <!-- BANDA SECTION -->
+
   <section class="section-banda">
     <div class="home-container">
       <h2>La nostra Banda</h2>
@@ -72,7 +108,7 @@ import HorizontalCard from '../components/Horizontal-card.astro';
     </div>
   </section>
 
-  <!-- CORSI SECTION 1 -->
+
   <section class="section1-corsi">
     <div class="home-container">
       <h2>Corsi di Musica</h2>
@@ -85,7 +121,6 @@ import HorizontalCard from '../components/Horizontal-card.astro';
     </div>
   </section>
 
-    <!-- CORSI SECTION 2 -->
   <section class="section2-corsi">
     <div class="home-container">
       <h2>I nostri Corsi</h2>
@@ -98,7 +133,7 @@ import HorizontalCard from '../components/Horizontal-card.astro';
     </div>
   </section>
 
-   <!-- NEWS SECTION -->
+
   <section class="section-news">
     <div class="home-container">
       <h2>News</h2>
@@ -111,5 +146,20 @@ import HorizontalCard from '../components/Horizontal-card.astro';
         <a href="/news" class="button">Vedi le News</a>
       </div>
     </div>
-  </section>
+  </section> CHI SIAMO SECTION -->
 </Layout>
+
+<style>
+
+  .section-hero, .section-about, .section-eventi, .section-banda, .section1-corsi, .section2-corsi, .section-news {
+    width: 100vw;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+  }
+
+  /* ABOUT SECTION */ 
+
+</style>
