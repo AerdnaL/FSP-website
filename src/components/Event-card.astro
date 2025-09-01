@@ -1,0 +1,33 @@
+---
+export interface Props {
+  imageSrc: string;
+  imageAlt: string;
+  href: string;
+}
+
+const { imageSrc, imageAlt, href } = Astro.props;
+---
+
+<div class="image-container">
+    <a href={href}>
+        <img src={imageSrc} alt={imageAlt} />
+    </a>
+</div>
+
+<style>
+
+    .image-container {
+        grid-column: span 4;
+        background-color: #ccc;
+        border-radius: 16px;
+        overflow: hidden;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+
+</style>
