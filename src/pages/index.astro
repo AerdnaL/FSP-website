@@ -49,7 +49,19 @@ import EventCard from '../components/Event-card.astro';
   </section>
 
   <section class="section-banda">
-    <div class="content-container"></div>
+    <div class="content-container">
+      <div class="section-title">
+        <h2>La nostra Banda</h2>
+      </div>
+      <div class="container-testo-banda">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, ligula porttitor
+          semper eleifend, elit nisi ultricies nulla, quis laoreet ligula ante suscipit sem.
+       </p>
+      </div>
+      <div class="container-bottoni">
+        <a href="/banda" class="button">Scopri di più sulla Banda</a>
+      </div>
+    </div>
   </section>
 
   <section class="section-corsi">
@@ -57,21 +69,7 @@ import EventCard from '../components/Event-card.astro';
   </section>
 
   <section class="section-news">
-    <!--     <div class="content-container">
-      <div class="container-immagine-about">
-        <img src="public/images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg" alt="about image" class="home-image" />
-      </div>
-      <div class="container-testo-about">
-        <h2>Chi Siamo</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Integer ac euismod ipsum, at hendrerit massa. Maecenas feugiat ac neque 
-          vel pellentesque. Curabitur ac ullamcorper massa. Vivamus eu mollis metus. 
-          Pellentesque habitant morbi tristique senectus et 
-          netus et malesuada fames ac turpis egestas. 
-        </p>
-        <div class="container-bottoni-about"></div>
-      </div>
-    </div> -->
+
   </section>
 
   <!-- 
@@ -243,6 +241,48 @@ import EventCard from '../components/Event-card.astro';
 
   .evento3 {
     grid-column: 9 / span 4;
+  }
+
+  /* BANDA SECTION */
+
+  .section-banda {
+    background-image: url('../public/images/banda-background-placeholder.jpg');
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+  }
+
+  .section-banda::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+  .section-banda h2 {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+
+  .section-banda p {
+    color: white;
+    position: relative;
+  }
+
+  .section-banda .container-bottoni {
+    position: relative;
+  }
+
+  .container-testo-banda {
+    grid-column: 2 / span 10;
+    text-align: center;
   }
 
 </style>
