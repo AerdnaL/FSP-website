@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 import EventCard from '../components/Event-card.astro';
+import CourseCard from '../components/Course-card.astro';
 ---
 
 <Layout title="Benvenuti nel sito della Banda">
@@ -64,12 +65,24 @@ import EventCard from '../components/Event-card.astro';
     </div>
   </section>
 
-  <section class="section-corsi">
+  <section class="section-corsi-above">
+    <div class="content-container">
+      <div class="section-title">
+        <h2>I nostri Corsi</h2>
+      </div>
+      <CourseCard title="Settore Classico" imageSrc="public/images/course-cards/chitarra-elettrica.png" imageAlt="Settore Classico" href="/corsi"/>
+      <CourseCard title="Settore Classico" imageSrc="public/images/course-cards/chitarra-elettrica.png" imageAlt="Settore Classico" href="/corsi"/>
+      <CourseCard title="Settore Classico" imageSrc="public/images/course-cards/chitarra-elettrica.png" imageAlt="Settore Classico" href="/corsi"/>
+      <CourseCard title="Settore Classico" imageSrc="public/images/course-cards/chitarra-elettrica.png" imageAlt="Settore Classico" href="/corsi"/>
+    </div>
+  </section>
+
+    <section class="section-corsi-below">
     <div class="content-container"></div>
   </section>
 
   <section class="section-news">
-
+    <div class="content-container"></div>
   </section>
 
   <!-- 
@@ -174,7 +187,7 @@ import EventCard from '../components/Event-card.astro';
 
 <style>
 
-  .section-hero, .section-about, .section-eventi, .section-banda, .section1-corsi, .section2-corsi, .section-news {
+  .section-hero, .section-about, .section-eventi, .section-banda, .section-corsi-above, .section-corsi-below, .section2-corsi, .section-news {
     width: 100vw;
     flex: 1;
     display: flex;

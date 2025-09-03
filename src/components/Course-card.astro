@@ -1,67 +1,73 @@
 ---
 interface Props {
-    title: string;
-    imageUrl: string;
+	title: string;
+	imageSrc: string;
+	imageAlt: string;
+	href: string;
 }
 
-const { title, imageUrl } = Astro.props;
+const { title, imageSrc, imageAlt, href } = Astro.props;
 ---
 
-<div class="course-card" data-image={imageUrl}>
-    <h3>{title}</h3>
-</div>
+<a href={href} class="course-card">
+	<img src={imageSrc} alt={imageAlt}>
+	<h3>{title}</h3>
+</a>
 
 <style>
-    .course-card {
-        width: 250px;
-        height: 250px;
-        border-radius: 16px;
-        position: relative;
-        overflow: hidden;
-    }
 
-    .course-card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: var(--bg-image);
-        background-size: cover;
-        background-position: center;
-        z-index: 1;
-    }
+	.course-card {
+		grid-column: span 3;
+		aspect-ratio: 1;
+		border-radius: 16px;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+		display: block; 
+    text-decoration: none; 
+    color: inherit;
+	}
 
-    .course-card::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 2;
-    }
+	.course-card::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-size: cover;
+		z-index: 1;
+	}
 
-    h3 {
-        position: absolute;
-        bottom: 30px;
-        left: 20px;
-        color: white;
-        margin: 0;
-        z-index: 3;
-        font-size: 1.25rem;
-    }
+	.course-card::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 2;
+	}
+
+	  .course-card h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 3; 
+    color: white;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+
+	.course-card img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		border-radius: 16px;
+	}
+
 </style>
-
-<script>
-    // Set background image dynamically
-    document.addEventListener('DOMContentLoaded', () => {
-        const cards = document.querySelectorAll('.course-card');
-        cards.forEach(card => {
-            const imageUrl = card.getAttribute('data-image');
-            (card as HTMLElement).style.setProperty('--bg-image', `url(${imageUrl})`);
-        });
-    });
-</script>
