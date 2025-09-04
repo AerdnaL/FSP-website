@@ -1,0 +1,82 @@
+---
+interface Props {
+    title: string;
+    date: string;
+    tag: string;
+    text: string;
+    imageSrc: string;
+    imageAlt: string;
+    href: string;
+}
+
+const { title, date, tag, text, imageSrc, imageAlt, href} = Astro.props
+---
+
+<a href={href} class="card">
+    <div class="card-image">
+        <img src={imageSrc} alt={imageAlt}>
+    </div>
+    <div class="card-content">
+        <span class="card-tag">{tag}</span>
+        <h3 class="card-title">{title}</h3>
+        <p class="card-text">{text}</p>
+        <p class="card-date">{date}</p>
+    </div>
+</a>
+
+<style>
+
+    .card {
+        grid-column: span 4;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-decoration: none;
+    }
+
+    .card-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 20px;
+    }
+
+    .card-tag {
+        background-color: #ccc;
+        color: #fff;
+        border-radius: 50px;
+        font-size: 12px;
+        margin: 0;
+        padding: 2px 10px;
+        text-transform: uppercase;
+    }
+
+    .card-title {
+        margin: 10px 0;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .card-text {
+        font-size: 14px;
+        margin: 0 0 40px 0;
+        font-weight: 500;
+        color: rgb(70, 68, 68);
+    }
+
+    .card-date {
+        font-size: 12px;
+        color: #888;
+        margin: 0;
+        align-self: flex-end;
+    }
+
+</style>
+

@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 import EventCard from '../components/Event-card.astro';
 import CourseCard from '../components/Course-card.astro';
+import NewsCard from '../components/News-card.astro';
 ---
 
 <Layout title="Benvenuti nel sito della Banda">
@@ -16,10 +17,10 @@ import CourseCard from '../components/Course-card.astro';
 
   <section class="section-about">
     <div class="content-container">
-      <div class="container-immagine-about">
+      <div class="container-immagine-laterale">
         <img src="public/images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg" alt="about image" class="home-image" />
       </div>
-      <div class="container-testo-about">
+      <div class="container-testo-laterale">
         <h2>Chi Siamo</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
           Integer ac euismod ipsum, at hendrerit massa. Maecenas feugiat ac neque 
@@ -27,7 +28,7 @@ import CourseCard from '../components/Course-card.astro';
           Pellentesque habitant morbi tristique senectus et 
           netus et malesuada fames ac turpis egestas. 
         </p>
-        <div class="container-bottoni-about">
+        <div class="container-bottoni-laterale">
           <a href="/corsi" class="button">Scopri i corsi</a>
           <a href="/eventi" class="button">Vedi eventi</a>
         </div>
@@ -77,85 +78,62 @@ import CourseCard from '../components/Course-card.astro';
     </div>
   </section>
 
-    <section class="section-corsi-below">
-    <div class="content-container"></div>
+  <section class="section-corsi-below">
+    <div class="content-container">
+      <div class="container-testo-laterale">
+        <h2>Chi Siamo</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+          Integer ac euismod ipsum, at hendrerit massa. Maecenas feugiat ac neque 
+          vel pellentesque. Curabitur ac ullamcorper massa. Vivamus eu mollis metus. 
+          Pellentesque habitant morbi tristique senectus et 
+          netus et malesuada fames ac turpis egestas. 
+        </p>
+        <div class="container-bottoni-laterale">
+          <a href="/corsi" class="button">Scopri i corsi</a>
+          <a href="/eventi" class="button">Vedi eventi</a>
+        </div>
+      </div>
+      <div class="container-immagine-laterale">
+        <img src="public/images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg" alt="about image" class="home-image" />
+      </div>
+    </div>
   </section>
 
   <section class="section-news">
-    <div class="content-container"></div>
+    <div class="content-container">
+      <div class="section-title">
+        <h2>Ultime News</h2>
+      </div>
+      <NewsCard 
+        title="Titolo News 1" 
+        date="01 Gennaio 2024" 
+        tag="Evento" 
+        text="Breve descrizione della news 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
+        imageSrc="public/images/hero-image-placeholder1.jpg" 
+        imageAlt="News 1" 
+        href="/news/news-1"/>
+
+      <NewsCard 
+        title="Titolo News 1" 
+        date="01 Gennaio 2024" 
+        tag="Evento" 
+        text="Breve descrizione della news 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
+        imageSrc="public/images/hero-image-placeholder1.jpg" 
+        imageAlt="News 1" 
+        href="/news/news-1"/>
+
+      <NewsCard 
+        title="Titolo News 1" 
+        date="01 Gennaio 2024" 
+        tag="Evento" 
+        text="Breve descrizione della news 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
+        imageSrc="public/images/hero-image-placeholder1.jpg" 
+        imageAlt="News 1" 
+        href="/news/news-1"/>
+    </div>
   </section>
 
   <!-- 
-  <section class="section-about">
-    <div class="home-container">
-      <div class="grid">
-        <div class="col-6">
-          <img src="public/images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg" alt="about image" class="home-image" />
-        </div>
-        <div class="col-6">
-          <h2>Chi Siamo</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            Integer ac euismod ipsum, at hendrerit massa. Maecenas feugiat ac neque 
-            vel pellentesque. Curabitur ac ullamcorper massa. Vivamus eu mollis metus. 
-            Pellentesque habitant morbi tristique senectus et 
-            netus et malesuada fames ac turpis egestas. 
-          </p>
-          <p>Sed ultrices imperdiet aliquet. Mauris suscipit ultrices justo eu pulvinar. 
-            Vestibulum vitae rutrum felis. Nulla id sem ac ipsum volutpat ultrices.
-          </p>
-          <div class="container-bottoni">
-            <a href="/corsi" class="button">Scopri i corsi</a>
-            <a href="/eventi" class="button">Vedi eventi</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section-eventi">
-    <div class="home-container">
-      <h2>Prossimi Eventi</h2>
-      <div class="grid">
-        <div class="col-12">
-          <HorizontalCard
-            title="Card Title"
-            subtitle="Card Subtitle"
-            description="Your description here"
-            imageUrl="public/images/events/In-Canto d'Estate(4).png"
-          />
-        </div>
-      </div>
-      <ul>
-        <li><a href="/eventi/evento-1">Evento 1</a></li>
-        <li><a href="/eventi/evento-2">Evento 2</a></li>
-        <li><a href="/eventi/evento-3">Evento 3</a></li>
-      </ul>
-    </div>
-  </section>
-
-
-  <section class="section-banda">
-    <div class="home-container">
-      <h2>La nostra Banda</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, ligula porttitor
-        semper eleifend, elit nisi ultricies nulla, quis laoreet ligula ante suscipit sem. 
-      </p>
-    </div>
-  </section>
-
-
-  <section class="section1-corsi">
-    <div class="home-container">
-      <h2>Corsi di Musica</h2>
-      <ul>
-        <li><a href="/corsi">Settore Classico</a></li>
-        <li><a href="/corsi">Settore Moderno</a></li>
-        <li><a href="/corsi">Canto</a></li>
-        <li><a href="/corsi">Propedeutica</a></li>
-      </ul>
-    </div>
-  </section>
 
   <section class="section2-corsi">
     <div class="home-container">
@@ -187,6 +165,8 @@ import CourseCard from '../components/Course-card.astro';
 
 <style>
 
+  /* COMMON STYLES */ 
+
   .section-hero, .section-about, .section-eventi, .section-banda, .section-corsi-above, .section-corsi-below, .section2-corsi, .section-news {
     width: 100vw;
     flex: 1;
@@ -196,13 +176,11 @@ import CourseCard from '../components/Course-card.astro';
     padding: 4rem 0;
   }
 
-  /* ABOUT SECTION */
-
-  .container-immagine-about {
-    grid-column: 1 / span 6;
+  .container-immagine-laterale {
+    grid-column: span 6;
   }
 
-  .container-immagine-about img {
+  .container-immagine-laterale img {
     width: 100%;
     height: auto;
     display: block;
@@ -210,50 +188,30 @@ import CourseCard from '../components/Course-card.astro';
     border-radius: 16px;
   }
 
-  .container-testo-about {
-    grid-column: 7 / span 6;
+  .container-testo-laterale {
+    grid-column: span 6;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
   }
 
-  .container-testo-about h2 {
+  .container-testo-laterale h2 {
     margin: 0;
     padding: 0;
     align-self: flex-start;
   }
 
-  .container-testo-about p {
+  .container-testo-laterale p {
     flex-grow: 1;
     margin: 50px 0 0 0;
   }
 
-  .container-bottoni-about {
+  .container-bottoni-laterale {
     margin-top: auto; 
     display: flex;
     gap: 15px; 
     align-self: flex-start; 
-  }
-
-  /* EVENTI SECTION */
-
-  .evento1, .evento2, .evento3 {
-    background-color: #ccc;
-    height: 500px;
-    border-radius: 16px;
-  }
-
-  .evento1 {
-    grid-column: 1 / span 4;
-  }
-
-  .evento2 {
-    grid-column: 5 / span 4;
-  }
-
-  .evento3 {
-    grid-column: 9 / span 4;
   }
 
   /* BANDA SECTION */
