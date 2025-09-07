@@ -20,6 +20,15 @@ html, body {
   flex: 1;
 }
 
+  .content-section {
+    width: 100vw;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+  }
+
 .content-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);

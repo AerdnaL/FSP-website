@@ -4,22 +4,194 @@ import CourseCard from '../components/Course-card.astro';
 ---
 
 <Layout title='pagina-corsi'>
-    <section class="section-hero" style="background-image: url('../public/images/hero-image-placeholder1.jpg');">
+
+    <section class="content-section section-hero" style="background-image: url('../public/images/hero-image-placeholder1.jpg');">
         <div class="content-container">
             <h1>I Nostri Corsi</h1>
         </div>
     </section>
 
+    <section class="content-section section-classico">
+        <div class="content-container">
+            <div class="section-title">
+                <h2>Settore Classico</h2>
+            </div>
+            <CourseCard
+                title="Flauto"
+                imageSrc="public/images/course-cards/flauto.png"
+                imageAlt="immagine di un flauto"
+                href="src/pages/corsi/flauto.astro"
+            />
+            <CourseCard
+                title="Clarinetto"
+                imageSrc="public/images/course-cards/clarinetto.png"
+                imageAlt="immagine di un clarinetto"
+                href="src/pages/corsi/clarinetto.astro"
+            />
+            <CourseCard
+                title="Sassofono"
+                imageSrc="public/images/course-cards/sassofono.png"
+                imageAlt="immagine di un sassofono"
+                href="src/pages/corsi/sassofono.astro"
+            />
+            <CourseCard
+                title="Corno"
+                imageSrc="public/images/course-cards/corno.png"
+                imageAlt="immagine di un corno"
+                href="src/pages/corsi/corno.astro"
+            />
+            <CourseCard
+                title="Tromba"
+                imageSrc="public/images/course-cards/tromba.png"
+                imageAlt="immagine di una tromba"
+                href="src/pages/corsi/tromba.astro"
+            />
+            <CourseCard
+                title="Trombone"
+                imageSrc="public/images/course-cards/trombone.png"
+                imageAlt="immagine di un trombone"
+                href="src/pages/corsi/trombone.astro"
+            />
+            <CourseCard
+                title="Tuba"
+                imageSrc="public/images/course-cards/tuba.png"
+                imageAlt="immagine di una tuba"
+                href="src/pages/corsi/tuba.astro"
+            />
+            <CourseCard
+                title="Pianoforte"
+                imageSrc="public/images/course-cards/pianoforte.png"
+                imageAlt="immagine di un pianoforte"
+                href="src/pages/corsi/pianoforte.astro"
+            />
+            <CourseCard
+                title="Violino"
+                imageSrc="public/images/course-cards/violino.png"
+                imageAlt="immagine di un violino"
+                href="src/pages/corsi/violino.astro"
+            />
+            <CourseCard
+                title="Viola"
+                imageSrc="public/images/course-cards/viola.png"
+                imageAlt="immagine di una viola"
+                href="src/pages/corsi/viola.astro"
+            />
+            <CourseCard
+                title="Violoncello"
+                imageSrc="public/images/course-cards/violoncello.png"
+                imageAlt="immagine di un violoncello"
+                href="src/pages/corsi/violoncello.astro"
+            />
+            <CourseCard
+                title="Contrabbasso"
+                imageSrc="public/images/course-cards/contrabbasso.png"
+                imageAlt="immagine di un contrabbasso"
+                href="src/pages/corsi/contrabbasso.astro"
+            />
+            <CourseCard
+                title="Percussioni"
+                imageSrc="public/images/course-cards/percussioni.png"
+                imageAlt="immagine di percussioni"
+                href="src/pages/corsi/percussioni.astro"
+            />
+            <CourseCard
+                title="Chitarra"
+                imageSrc="public/images/course-cards/chitarra.png"
+                imageAlt="immagine di una chitarra"
+                href="src/pages/corsi/chitarra.astro"
+            />
+        </div>
+    </section>
 
+    <section class="content-section section-moderno">
+        <div class="content-container">
+            <div class="section-title">
+                <h2>Settore Moderno</h2>
+            </div>
+            <CourseCard
+                title="Batteria"
+                imageSrc="public/images/course-cards/batteria.png"
+                imageAlt="immagine di una batteria"
+                href="src/pages/corsi/batteria.astro"
+            />
+            <CourseCard
+                title="Chitarra Elettrica"
+                imageSrc="public/images/course-cards/chitarra-elettrica.png"
+                imageAlt="immagine di una chitarra elettrica"
+                href="src/pages/corsi/chitarra-elettrica.astro"
+            />
+            <CourseCard
+                title="Basso Elettrico"
+                imageSrc="public/images/course-cards/basso-elettrico.png"
+                imageAlt="immagine di un basso elettrico"
+                href="src/pages/corsi/basso-elettrico.astro"
+            />
+            <CourseCard
+                title="Pianoforte Moderno"
+                imageSrc="public/images/course-cards/piano-moderno.png"
+                imageAlt="immagine di un pianoforte moderno"
+                href="src/pages/corsi/pianoforte-moderno.astro"
+            />
+        </div>
+    </section>
+
+    <section class="content-section section-canto">
+        <div class="content-container">
+            <div class="section-title">
+                <h2>Canto</h2>
+            </div>
+            <CourseCard
+                title="Canto Classico"
+                imageSrc="public/images/course-cards/canto-classico.png"
+                imageAlt="immagine di una cantante lirica"
+                href="src/pages/corsi/canto-classico.astro"
+            />
+            <CourseCard
+                title="Canto Moderno"
+                imageSrc="public/images/course-cards/canto-moderno.png"
+                imageAlt="immagine di un cantante moderno"
+                href="src/pages/corsi/canto-moderno.astro"
+            />
+            <CourseCard
+                title="Coro Gospel"
+                imageSrc="public/images/course-cards/coro-gospel.png"
+                imageAlt="immagine di un coro gospel"
+                href="src/pages/corsi/coro-gospel.astro"
+            />
+        </div>
+    </section>
+
+    <section class="content-section section-propedeutica">
+        <div class="content-container">
+            <div class="section-title">
+                <h2>Propedeutica</h2>
+            </div>
+            <CourseCard
+                title="Propedeutica Musicale"
+                imageSrc="public/images/course-cards/propedeutica.png"
+                imageAlt="immagine di bambini che suonano"
+                href="src/pages/corsi/propedeutica.astro"
+            />
+            <CourseCard
+                title="Coro delle Voci Bianche"
+                imageSrc="public/images/course-cards/voci-bianche.png"
+                imageAlt="immagine di bambino che canta"
+                href="src/pages/corsi/voci-bianche.astro"
+            />
+        </div>
+    </section>
+
+</Layout>
+
+    <!-- 
     <div class="home-container">
-        <!-- Heading Section -->
+
         <div class="grid">
             <div class="col-12">
                 <h1 class="corsi-heading">I nostri Corsi</h1>
             </div>
         </div>
 
-        <!-- Classical Section -->
         <div class="grid section-courses">
             <div class="col-12">
                 <h2>Settore Classico</h2>
@@ -60,10 +232,8 @@ import CourseCard from '../components/Course-card.astro';
                     imageUrl="./public/images/violin.jpg"
                 />
             </div>
-            <!-- Add more cards as needed -->
         </div>
 
-        <!-- Modern Section -->
         <div class="grid section-courses">
             <div class="col-12">
                 <h2>Settore Moderno</h2>
@@ -74,10 +244,8 @@ import CourseCard from '../components/Course-card.astro';
                     imageUrl="./public/images/electric-guitar.jpg"
                 />
             </div>
-            <!-- Add more cards as needed -->
         </div>
 
-        <!-- Singing Section -->
         <div class="grid section-courses">
             <div class="col-12">
                 <h2>Canto</h2>
@@ -88,10 +256,8 @@ import CourseCard from '../components/Course-card.astro';
                     imageUrl="./public/images/singing.jpg"
                 />
             </div>
-            <!-- Add more cards as needed -->
         </div>
 
-        <!-- Propedeutica Section -->
         <div class="grid section-courses">
             <div class="col-12">
                 <h2>Propedeutica</h2>
@@ -102,7 +268,6 @@ import CourseCard from '../components/Course-card.astro';
                     imageUrl="./public/images/propedeutica.jpg"
                 />
             </div>
-            <!-- Add more cards as needed -->
         </div>
     </div>
-</Layout>
+    -->

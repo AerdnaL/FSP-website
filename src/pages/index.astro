@@ -8,14 +8,13 @@ import NewsCard from '../components/News-card.astro';
 
 <Layout title="Benvenuti nel sito della Banda">
 
-  <!-- HERO SECTION -->
-  <section class="section-hero" style="background-image: url('../public/images/hero-image-placeholder1.jpg');">
+  <section class="content-section section-hero" style="background-image: url('../public/images/hero-image-placeholder1.jpg');">
     <div class="content-container">
       <h1>Filarmonica Senofonte Prato</h1>
     </div>
   </section>
 
-  <section class="section-about">
+  <section class="content-section section-about">
     <div class="content-container">
       <div class="container-immagine-laterale">
         <img src="public/images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg" alt="about image" class="home-image" />
@@ -36,7 +35,7 @@ import NewsCard from '../components/News-card.astro';
     </div>
   </section>
 
-  <section class="section-eventi">
+  <section class="content-section section-eventi">
     <div class="content-container" style="gap: 60px;">
       <div class="section-title">
         <h2>Prossimi Eventi</h2>
@@ -50,7 +49,7 @@ import NewsCard from '../components/News-card.astro';
     </div>
   </section>
 
-  <section class="section-banda">
+  <section class="content-section section-banda">
     <div class="content-container">
       <div class="section-title">
         <h2>La nostra Banda</h2>
@@ -66,7 +65,7 @@ import NewsCard from '../components/News-card.astro';
     </div>
   </section>
 
-  <section class="section-corsi-above">
+  <section class="content-section section-corsi-above">
     <div class="content-container">
       <div class="section-title">
         <h2>I nostri Corsi</h2>
@@ -78,7 +77,7 @@ import NewsCard from '../components/News-card.astro';
     </div>
   </section>
 
-  <section class="section-corsi-below">
+  <section class="content-section section-corsi-below">
     <div class="content-container">
       <div class="container-testo-laterale">
         <h2>Chi Siamo</h2>
@@ -99,7 +98,7 @@ import NewsCard from '../components/News-card.astro';
     </div>
   </section>
 
-  <section class="section-news">
+  <section class="content-section section-news">
     <div class="content-container">
       <div class="section-title">
         <h2>Ultime News</h2>
@@ -133,48 +132,11 @@ import NewsCard from '../components/News-card.astro';
     </div>
   </section>
 
-  <!-- 
-
-  <section class="section2-corsi">
-    <div class="home-container">
-      <h2>I nostri Corsi</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, ligula porttitor
-        semper eleifend, elit nisi ultricies nulla, quis laoreet ligula ante suscipit sem. 
-      </p>
-      <div class="container-bottoni">
-        <a href="/corsi" class="button">Scopri i Corsi</a>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="section-news">
-    <div class="home-container">
-      <h2>News</h2>
-      <ul>
-        <li><a href="/news/news-1">News 1</a></li>
-        <li><a href="/news/news-2">News 2</a></li>
-        <li><a href="/news/news-3">News 3</a></li>
-      </ul>
-      <div class="container-bottoni">
-        <a href="/news" class="button">Vedi le News</a>
-      </div>
-    </div>
-  </section> CHI SIAMO SECTION -->
 </Layout>
 
 <style>
 
   /* COMMON STYLES */ 
-
-  .section-hero, .section-about, .section-eventi, .section-banda, .section-corsi-above, .section-corsi-below, .section2-corsi, .section-news {
-    width: 100vw;
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 0;
-  }
 
   .container-immagine-laterale {
     grid-column: span 6;
