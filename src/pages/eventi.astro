@@ -1,13 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import EventCard from '../components/Event-card.astro';
 ---
 
 <Layout title='Eventi'>
-    <section class="content-section ection-hero" style="background-image: url('../public/images/hero-image-placeholder1.jpg');">
+    <section class="content-section section-hero" style="background-image: url('../public/images/hero-image-placeholder1.jpg');">
         <div class="content-container">
-            <h1>I Nostri Corsi</h1>
+            <h1>I Nostri Eventi</h1>
         </div>
     </section>
-    <section class="section-prossimi-eventi"></section>
-    <section class="section-eventi-passati"></section>
+    <section class="content-section section-prossimi-eventi">
+        <div class="content-container">
+            <div class="section-title">
+                <h2>Prossimi Eventi</h2>
+            </div>
+            <EventCard 
+                imageSrc="public/images/events/In-Canto d'Estate.png" 
+                imageAlt="Evento 1"
+                title="In Canto d'Estate"
+                date="15 Luglio 2024"
+                location="Prato" 
+                href="eventi/evento-1"
+            />
+            <EventCard 
+                imageSrc="public/images/events/Corsi di Musica 2025.png" 
+                imageAlt="Evento 2"
+                title="Corsi di Musica 2025"
+                date="01 Settembre 2024"
+                location="Prato"
+                href="eventi/evento-2"
+            />
+            <EventCard 
+                imageSrc="public/images/events/Distopia della Farfalla.png" 
+                imageAlt="Evento 3"
+                title="Distopia della Farfalla"
+                date="20 Ottobre 2024"
+                location="Prato"
+                href="eventi/evento-3"
+            />
+        </div>
+    </section>
+    <section class="content-section section-eventi-passati">
+        <div class="content-container">
+            <div class="section-title">
+                <h2>Eventi Passati</h2>
+            </div>
+            <EventCard 
+                imageSrc="public/images/events/trio_essenza.jpg" 
+                imageAlt="locandina concerto trio essenza"
+                title="Trio Essenza In Concerto"
+                date="10 Maggio 2024"
+                location="Prato" 
+                href="eventi/trio-essenza"
+            />
+        </div>
+    </section>
 </Layout>

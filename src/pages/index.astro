@@ -40,9 +40,30 @@ import NewsCard from '../components/News-card.astro';
       <div class="section-title">
         <h2>Prossimi Eventi</h2>
       </div>
-      <EventCard imageSrc="public/images/events/In-Canto d'Estate.png" imageAlt="Evento 1" href="src/pages/eventi/evento-1.astro"/>
-      <EventCard imageSrc="public/images/events/Corsi di Musica 2025.png" imageAlt="Evento 2" href="src/pages/eventi/evento-2.astro"/>
-      <EventCard imageSrc="public/images/events/Distopia della Farfalla.png" imageAlt="Evento 3" href="src/pages/eventi/evento-3.astro"/>
+      <EventCard 
+        imageSrc="public/images/events/In-Canto d'Estate.png" 
+        imageAlt="Evento 1"
+        title="In Canto d'Estate"
+        date="15 Luglio 2024"
+        location="Prato" 
+        href="src/pages/eventi/evento-1.astro"
+      />
+      <EventCard 
+        imageSrc="public/images/events/Corsi di Musica 2025.png" 
+        imageAlt="Evento 2"
+        title="Corsi di Musica 2025"
+        date="01 Settembre 2024"
+        location="Prato"
+        href="src/pages/eventi/evento-2.astro"
+      />
+      <EventCard 
+        imageSrc="public/images/events/Distopia della Farfalla.png" 
+        imageAlt="Evento 3"
+        title="Distopia della Farfalla"
+        date="20 Ottobre 2024"
+        location="Prato"
+        href="src/pages/eventi/evento-3.astro"
+      />
       <div class="container-bottoni">
         <a href="/eventi" class="button">Vedi tutti gli eventi</a>
       </div>
