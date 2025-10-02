@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CourseCard from '../components/Course-card.astro';
+import CourseCard2 from '../components/Course-card2.astro';
 ---
 
 <Layout title='pagina-corsi'>
@@ -16,13 +17,18 @@ import CourseCard from '../components/Course-card.astro';
             <div class="section-title">
                 <h2>Settore Classico</h2>
             </div>
-            <CourseCard
+            <CourseCard2
                 title="Flauto"
                 imageSrc="public/images/course-cards/flauto.png"
                 imageAlt="immagine di un flauto"
                 href="src/pages/corsi/flauto.astro"
+                description="Learn the core concepts of JavaScript programming from variables to functions."
+                duration="6 weeks"
+                instructor="John Doe"
+                level="Beginner"
+                price="$99"
             />
-            <CourseCard
+            <CourseCard2
                 title="Clarinetto"
                 imageSrc="public/images/course-cards/clarinetto.png"
                 imageAlt="immagine di un clarinetto"
