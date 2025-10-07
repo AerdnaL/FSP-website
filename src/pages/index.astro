@@ -37,6 +37,11 @@ import NewsCard from '../components/News-card.astro';
   </section>
 
   <section class="content-section section-eventi">
+    <div class="custom-shape-divider-top-1759771616">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+      </svg>
+    </div>
     <div class="content-container" style="gap: 60px;">
       <div class="section-title">
         <h2>Prossimi Eventi</h2>
@@ -69,25 +74,14 @@ import NewsCard from '../components/News-card.astro';
         <a href="/eventi" class="button">Vedi tutti gli eventi</a>
       </div>
     </div>
-  </section>
-
-  <section class="content-section section-banda">
-    <div class="content-container">
-      <div class="section-title">
-        <h2>La nostra Banda</h2>
-      </div>
-      <div class="container-testo-banda">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, ligula porttitor
-          semper eleifend, elit nisi ultricies nulla, quis laoreet ligula ante suscipit sem.
-       </p>
-      </div>
-      <div class="container-bottoni">
-        <a href="/banda" class="button">Scopri di più sulla Banda</a>
-      </div>
+    <div class="custom-shape-divider-bottom-1759769856">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+        </svg>
     </div>
   </section>
 
-  <section class="content-section section-corsi-above">
+    <section class="content-section section-corsi-above">
     <div class="content-container">
       <div class="section-title">
         <h2>I nostri Corsi</h2>
@@ -116,6 +110,22 @@ import NewsCard from '../components/News-card.astro';
       </div>
       <div class="container-immagine-laterale">
         <img src="public/images/wes-hicks-MEL-jJnm7RQ-unsplash.jpg" alt="about image" class="home-image" />
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section-banda">
+    <div class="content-container">
+      <div class="section-title">
+        <h2>La nostra Banda</h2>
+      </div>
+      <div class="container-testo-banda">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec gravida, ligula porttitor
+          semper eleifend, elit nisi ultricies nulla, quis laoreet ligula ante suscipit sem.
+       </p>
+      </div>
+      <div class="container-bottoni">
+        <a href="/banda" class="button">Scopri di più sulla Banda</a>
       </div>
     </div>
   </section>
@@ -196,6 +206,54 @@ import NewsCard from '../components/News-card.astro';
     display: flex;
     gap: 15px; 
     align-self: flex-start; 
+  }
+
+  /* EVENTI SECTION*/
+
+  .section-eventi {
+    background-color: orange;
+    position: relative;
+  }
+
+  .custom-shape-divider-top-1759771616 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-top-1759771616 svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 100px;
+  }
+
+  .custom-shape-divider-top-1759771616 .shape-fill {
+      fill: #ffffff;
+  }
+
+  .custom-shape-divider-bottom-1759769856 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .custom-shape-divider-bottom-1759769856 svg {
+      position: relative;
+      display: block;
+      width: calc(100% + 1.3px);
+      height: 100px;
+  }
+
+  .custom-shape-divider-bottom-1759769856 .shape-fill {
+      fill: #ffffff;
   }
 
   /* BANDA SECTION */
