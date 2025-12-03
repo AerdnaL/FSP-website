@@ -8,39 +8,72 @@ const { eventTitle, eventDate, eventLocation, eventTime, eventPrice, imageSrc, i
 <Layout title="evento">
     <section class="event-title content-section">
         <div class="content-container">
-            <h1>{eventTitle}</h1>
-            <h3>{eventDate}</h3>
-            <h3>{eventTime}</h3>
-            <h3>{eventPrice}</h3>
-            <h3>{eventLocation}</h3>
+           <h1>{eventTitle}</h1>
         </div>
     </section>
-    <section class="event-body content-section">
+    <section class="event-body">
         <div class="content-container">
-            <p><slot /></p>
-            <img src={imageSrc} alt={imageAlt} />
+            <div class="container-info">
+                <h3>{eventDate}</h3>
+                <h3>{eventTime}</h3>
+                <h3>{eventPrice}</h3>
+                <h3>{eventLocation}</h3>
+                <p><slot /></p>
+            </div>
+            <div class="container-immagine">
+                <img src={imageSrc} alt={imageAlt} />
+            </div>
         </div>
     </section>
 </Layout>
 
 <style>
 
-    .content-container h1, h3 {
-        grid-column: 1 / -1;
+    .content-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+        align-items: start;
+        padding-top: 0;
+    }
+
+    .container-info {
+        grid-column: 1 / 6;
+    }
+
+    .container-info h3 {
+        margin-bottom: 2rem;    
+        
+    }
+
+    .container-info p {
+        margin-top: 4rem;
+        line-height: 1.6;
+    }
+
+    .container-immagine {
+        grid-column: 8 / 13;
     }
 
     .content-container h1 {
         font-size: 4rem;
+        grid-column: 1 / -1;
     }
 
-    .event-body p {
-        grid-column: span 6;
-        margin-bottom: 2rem;
-        line-height: 1.6;
+    .content-container h3 {
+        grid-column: 1 / 8;
+    }
+
+    .event-body {
+        width: 100vw;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .event-body img {
-        grid-column: span 6;
+        grid-column: 8 / 13;
         width: 100%;
         height: auto;
         display: block;

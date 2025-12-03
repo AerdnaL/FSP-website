@@ -7,8 +7,6 @@ interface Props {
   description?: string;
   duration?: string;
   instructor?: string;
-  level?: string;
-  price?: string;
 }
 
 const { 
@@ -19,8 +17,6 @@ const {
   description = "No description available",
   duration = "Not specified",
   instructor = "TBD",
-  level = "All levels",
-  price = "Free"
 } = Astro.props;
 
 // Generate unique ID for this component instance
@@ -49,21 +45,14 @@ const modalId = title.toLowerCase().replace(/\s+/g, '-');
           
           <div class="course-details">
             <div class="detail-item">
-              <strong>Duration:</strong> {duration}
+              <strong>Istruttore:</strong> {instructor}
             </div>
             <div class="detail-item">
-              <strong>Instructor:</strong> {instructor}
-            </div>
-            <div class="detail-item">
-              <strong>Level:</strong> {level}
-            </div>
-            <div class="detail-item">
-              <strong>Price:</strong> {price}
+              <strong>Ore Settimanali:</strong> {duration}
             </div>
           </div>
           
           <div class="modal-actions">
-            <a href={href} class="enroll-btn">Enroll Now</a>
             <button class="close-modal-btn" data-modal-close={modalId}>Close</button>
           </div>
         </div>
@@ -75,6 +64,7 @@ const modalId = title.toLowerCase().replace(/\s+/g, '-');
 <style>
   .course-card-wrapper {
     position: relative;
+    grid-column: span 3;
   }
 
   .course-card {

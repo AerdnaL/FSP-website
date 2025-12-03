@@ -1,11 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import NewsCard from '../components/News-card.astro';
 ---
 
-<Layout title=''>
+<Layout title='News'>
     <section class="content-section section-hero" style="background-image: url('../public/images/hero-image-placeholder1.jpg');">
         <div class="content-container">
             <h1>News</h1>
         </div>
+    </section>
+    <section class="content-section">
+        <section class="content-container">
+            <div class="section-title">
+                <h2>Ultime News</h2>
+            </div>
+                  <NewsCard 
+        title="Titolo News 1" 
+        date="01 Gennaio 2024" 
+        tag="Evento" 
+        text="Breve descrizione della news 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
+        imageSrc="public/images/hero-image-placeholder1.jpg" 
+        imageAlt="News 1" 
+        href="/news/news-1"/>
+
+      <NewsCard 
+        title="Titolo News 1" 
+        date="01 Gennaio 2024" 
+        tag="Evento" 
+        text="Breve descrizione della news 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
+        imageSrc="public/images/hero-image-placeholder1.jpg" 
+        imageAlt="News 1" 
+        href="/news/news-1"/>
+
+      <NewsCard 
+        title="Titolo News 1" 
+        date="01 Gennaio 2024" 
+        tag="Evento" 
+        text="Breve descrizione della news 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit." 
+        imageSrc="public/images/hero-image-placeholder1.jpg" 
+        imageAlt="News 1" 
+        href="/news/news-1"/>
+        </section>
     </section>
 </Layout>
