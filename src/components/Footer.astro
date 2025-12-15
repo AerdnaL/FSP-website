@@ -4,7 +4,23 @@
 
 <footer class="footer">
   <div class="footer-content">
-    <p>Questo è il footer del sito</p>
+    <div class="footer-col">
+        <a href="/" class="logo-link">
+          <img src="../public/images/logo-fsp-website.png" alt="Logo" class="logo" />
+        </a>
+        <p>555 - 9988888</p>
+        <p>555 - 9988888</p>
+        <p>indirizzo</p>
+    </div>
+    <div class="footer-col">
+        <p>Home</p>
+        <p>Eventi</p>
+        <p>Corsi</p>
+        <p>Storia</p>
+        <p>Banda</p>
+        <p>News</p>
+    </div>
+    <div class="footer-col"></div>
   </div>
 </footer>
 
@@ -17,14 +33,19 @@
   }
 
   .footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
-    text-align: center;
+    padding: 0;
+    align-items: start;
   }
 
-  .footer-content p {
-    margin: 0;
-    font-size: 1rem;
+  .logo {
+    height: 64px;
+    width: auto;
+    margin-bottom: 20px;
   }
 </style>
