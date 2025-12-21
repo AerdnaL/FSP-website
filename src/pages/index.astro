@@ -4,6 +4,7 @@ import '../styles/global.css';
 import EventCard from '../components/Event-card.astro';
 import CourseCard from '../components/Course-card.astro';
 import NewsCard from '../components/News-card.astro';
+import Button from '../components/button.astro';
 ---
 
 <Layout title="Benvenuti nel sito della Banda">
@@ -23,8 +24,8 @@ import NewsCard from '../components/News-card.astro';
         <h2>Chi Siamo</h2>
         <p>Siamo una realtà dinamica dove l'apprendimento passa direttamente dal palcoscenico. La nostra offerta didattica è arricchita da un calendario ricco di eventi, festival e performance live che permettono agli studenti di testare le proprie competenze in contesti reali. Grazie a una rete attiva di collaborazioni, trasformiamo lo studio della musica in un’esperienza pratica continua, fatta di suoni, luci e costante interazione con la scena culturale locale.</p>
         <div class="container-bottoni-laterale">
-          <a href="/corsi" class="button">Scopri i corsi</a>
-          <a href="/eventi" class="button">Vedi eventi</a>
+          <Button href="/corsi" text="Scopri i corsi" />
+          <Button href="/eventi" text="Vedi eventi" />
         </div>
       </div>
     </div>
@@ -65,7 +66,7 @@ import NewsCard from '../components/News-card.astro';
         href="src/pages/eventi/evento-3.astro"
       />
       <div class="container-bottoni">
-        <a href="/eventi" class="button">Vedi tutti gli eventi</a>
+        <Button href="/eventi" text="Vedi tutti gli eventi" />
       </div>
     </div>
     <div class="custom-shape-divider-bottom-1759769856">
@@ -98,7 +99,7 @@ import NewsCard from '../components/News-card.astro';
           netus et malesuada fames ac turpis egestas. 
         </p>
         <div class="container-bottoni-laterale">
-          <a href="/corsi" class="button">Scopri i corsi</a>
+          <Button href="/corsi" text="Scopri i corsi" />
         </div>
       </div>
       <div class="container-immagine-laterale">
@@ -118,7 +119,7 @@ import NewsCard from '../components/News-card.astro';
        </p>
       </div>
       <div class="container-bottoni">
-        <a href="/banda" class="button">Scopri di più sulla Banda</a>
+        <Button href="/banda" text="Scopri di più sulla Banda" />
       </div>
     </div>
   </section>
@@ -154,7 +155,12 @@ import NewsCard from '../components/News-card.astro';
         imageSrc="public/images/hero-image-placeholder1.jpg" 
         imageAlt="News 1" 
         href="/news/news-1"/>
+
+      <div class="container-bottoni">
+        <Button href="/news" text="Vedi tutte le news" />
+      </div>
     </div>
+    
   </section>
 
 </Layout>
