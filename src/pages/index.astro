@@ -10,7 +10,7 @@ import NewsCard from '../components/News-card.astro';
 
   <section class="content-section section-hero" style="background-image: url('../public/images/hero-image-placeholder1.jpg');">
     <div class="content-container">
-      <h1 style="font-size: 6rem;">Filarmonica <br> Senofonte Prato</h1>
+      <h1>Filarmonica <br> Senofonte Prato</h1>
     </div>
   </section>
 
@@ -21,13 +21,7 @@ import NewsCard from '../components/News-card.astro';
       </div>
       <div class="container-testo-laterale">
         <h2>Chi Siamo</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-          Integer ac euismod ipsum, at hendrerit massa. Maecenas feugiat ac neque 
-          vel pellentesque. Curabitur ac ullamcorper massa. Vivamus eu mollis metus. 
-          Pellentesque habitant morbi tristique senectus et 
-          netus et malesuada fames ac turpis egestas. 
-        </p>
-        <p>Vivamus eu mollis metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+        <p>Siamo una realtà dinamica dove l'apprendimento passa direttamente dal palcoscenico. La nostra offerta didattica è arricchita da un calendario ricco di eventi, festival e performance live che permettono agli studenti di testare le proprie competenze in contesti reali. Grazie a una rete attiva di collaborazioni, trasformiamo lo studio della musica in un’esperienza pratica continua, fatta di suoni, luci e costante interazione con la scena culturale locale.</p>
         <div class="container-bottoni-laterale">
           <a href="/corsi" class="button">Scopri i corsi</a>
           <a href="/eventi" class="button">Vedi eventi</a>
@@ -197,7 +191,7 @@ import NewsCard from '../components/News-card.astro';
 
   .container-testo-laterale p {
     flex-grow: 1;
-    margin: 20px 0 0 0;
+    margin: 10px 0 20px 0;
   }
 
   .container-bottoni-laterale {
@@ -295,6 +289,13 @@ import NewsCard from '../components/News-card.astro';
   .container-testo-banda {
     grid-column: 2 / span 10;
     text-align: center;
+  }
+
+  @media (max-width: 992px) {
+    .container-immagine-laterale,
+    .container-testo-laterale {
+      grid-column: span 12;
+    }
   }
 
 </style>

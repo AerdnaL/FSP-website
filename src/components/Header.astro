@@ -9,7 +9,8 @@
           <img src="../public/images/logo-fsp-website.png" alt="Logo" class="logo" />
         </a>
       </div>
-      <div class="nav-right">
+      
+      <div class="nav-right desktop-only">
         <ul class="nav-list">
           <li><a href="/corsi" class="nav-link">Corsi</a></li>
           <li><a href="/eventi" class="nav-link">Eventi</a></li>
@@ -18,8 +19,25 @@
           <li><a href="/news" class="nav-link">News</a></li>
         </ul>
       </div>
+
+      <button class="menu-toggle mobile-only" aria-expanded="false" aria-controls="mobile-nav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
     </nav>
 </header>
+
+<div class="off-canvas-menu" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Menu di Navigazione">
+    <button class="close-menu">✕</button>
+    <ul class="nav-list-mobile">
+        <li><a href="/corsi" class="nav-link-mobile">Corsi</a></li>
+        <li><a href="/eventi" class="nav-link-mobile">Eventi</a></li>
+        <li><a href="/storia" class="nav-link-mobile">Storia</a></li>
+        <li><a href="/banda" class="nav-link-mobile">Banda</a></li>
+        <li><a href="/news" class="nav-link-mobile">News</a></li>
+    </ul>
+</div>
 
 <style>
   .header {
@@ -78,30 +96,144 @@
     background-color: rgba(255, 255, 255, 0.2);
     color: white;
   }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+  }
 
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .header {
-      padding: 1rem;
+  .icon-bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .off-canvas-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100%; 
+    background-color: #1e2a42;
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-out;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .off-canvas-menu.is-open {
+    transform: translateX(0);
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  .nav-list-mobile {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-width: 400px; 
+    padding-top: 50px;
+  }
+  
+  .nav-list-mobile li {
+    margin-bottom: 15px;
+    padding: 5px 0;
+  }
+
+  .nav-link-mobile {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: block;
+    text-align: center;
+    padding: 15px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link-mobile:hover {
+    color: #A0B3D7;
+  }
+
+  @media (min-width: 992px) {
+    .desktop-only {
+      display: block !important;
     }
-    
-    .navigation {
-      flex-direction: column;
-      gap: 1rem;
+    .mobile-only {
+      display: none !important;
     }
-    
-    .nav-left, .nav-right {
-      width: 100%;
-    }
-    
-    .nav-list {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    
-    .nav-link {
-      display: block;
-      text-align: center;
+    .off-canvas-menu.is-open {
+      display: none;
     }
   }
+
+  @media (max-width: 1199px) {
+  .navigation {width: calc(100% - 120px);}
+}
+
+  @media (max-width: 991px) {
+    .navigation {width: calc(100% - 100px);}
+    .desktop-only {
+      display: none !important;
+    }
+    .mobile-only {
+      display: flex !important;
+    }
+  }
+
 </style>
+
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const closeMenuButton = document.querySelector('.close-menu');
+  const offCanvasMenu = document.querySelector('.off-canvas-menu');
+  const navLinks = document.querySelectorAll('.nav-list-mobile .nav-link-mobile');
+
+  function toggleMenu() {
+    if (!offCanvasMenu || !menuToggle) return;
+    const isOpen = offCanvasMenu.classList.toggle('is-open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.style.overflow = isOpen ? 'hidden' : 'auto';
+  }
+
+  if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+  if (closeMenuButton) closeMenuButton.addEventListener('click', toggleMenu);
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (offCanvasMenu?.classList.contains('is-open')) {
+        toggleMenu();
+      }
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && offCanvasMenu?.classList.contains('is-open')) {
+      toggleMenu();
+    }
+  });
+</script>

@@ -86,7 +86,7 @@ html, body {
   text-align: center;
   color: white;
   position: relative;
-  font-size: 4rem;
+  font-size: 6rem;
   font-family: "EB Garamond", serif;
 }
 
@@ -106,4 +106,13 @@ html, body {
     text-decoration: none;
     display: inline-block;
     text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .content-container {margin: 0 60px;}
+}
+
+@media (max-width:992px) {
+  .content-container {margin: 0 50px;}
+  .section-hero h1 {font-size: 5rem;}
 }
